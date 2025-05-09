@@ -1,0 +1,100 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 40px;
+  background-color: #151515;
+  font-family: Arial;
+  display: flex;               /* Abilita Flexbox */
+  flex-direction: column;      /* Imposta la disposizione in colonna */
+  justify-content: center;     /* Centra verticalmente */
+  align-items: center;         /* Centra orizzontalmente */
+  height: 100vh;               /* Usa tutta l'altezza della finestra */
+  text-align: center;          /* Allinea il testo al centro */
+}
+
+h2{
+  color: #f3f3f3;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(270deg, #ff4d4d, #4dff4d, #4d4dff, #ff4d4d);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 10s ease infinite;
+}
+
+/* Animazione del gradiente */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* src/index.css */
+.custom-button {
+  background-color: #0e19ac;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.custom-button:hover {
+  background-color: #117f86;
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button svg {
+  margin-right: 8px;
+}
+
+.custom-button:focus {
+  outline: none;
+}
+
+/* Centra il contenitore dell'immagine */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;  /* Ridotto ulteriormente la larghezza del contenitore */
+  height: 100px; /* Ridotto ulteriormente l'altezza del contenitore */
+  margin: 20px auto; /* Centra il contenitore orizzontalmente */
+  border: 1px solid #ccc; /* Aggiungi un bordo per vedere chiaramente il contenitore */
+}
+
+/* Immagine */
+img {
+  width: 100%;         /* L'immagine occuperà tutta la larghezza del contenitore */
+  height: 100%;        /* L'immagine occuperà tutta l'altezza del contenitore */
+  object-fit: contain; /* Mantiene le proporzioni senza deformare l'immagine */
+  border-radius: 10px;
+}
