@@ -12,10 +12,10 @@ body {
   flex-direction: column;      
   justify-content: center;     
   align-items: center;         
-  height: 100vh;               
+  min-height: 110vh;               
   text-align: center; 
   position: relative;
-  overflow: hidden;         
+  overflow: auto;         
 }
 
 body::before {
@@ -135,6 +135,7 @@ img {
   
 }
 
+
 .Gambe{
   position: absolute;
   left: 50%;
@@ -202,5 +203,22 @@ img {
 .Scarpe:hover{
   background-color: #117f86;
   transform: translateY(-2px);
+}
+
+
+/* Animazione fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 3s forwards; /* Applica l'animazione di fade-in */
+}
+
+/* Keyframes per l'animazione fade-in */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 

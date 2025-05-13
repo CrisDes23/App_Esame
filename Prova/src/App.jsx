@@ -18,7 +18,7 @@ function App() {
     if (file) {
       // Aggiorna lo stato con l'immagine caricata
       setImage(URL.createObjectURL(file));
-      analizzaImmagine(file); // Chiamata alla funzione per l'analisi dell'immagine (se serve)
+      
     }
   };
 
@@ -47,26 +47,29 @@ function App() {
             alt="Uploaded"
           />
         </div>
+
       )}
 
-      <h2>Su che parte del vestito ti serve un consiglio?</h2>
+      {image &&(
+        <>
+          <h2 className='fade-in'>Su che parte del vestito ti serve un consiglio?</h2>
 
-      <div className='Scelta-Consiglio'>
+          <div className='Scelta-Consiglio'>
         
-        <button className='Busto'>
-          Busto
-        </button>
+            <button className='Busto fade-in'>
+             Busto
+            </button>
 
-        <button className='Gambe'>
-          Gambe
-        </button>
+           <button className='Gambe fade-in'>
+             Gambe
+            </button>
 
-        <button className='Scarpe'>
-          Scarpe
-        </button>
-      
-      </div>
-      
+            <button className='Scarpe fade-in'>
+              Scarpe
+            </button>
+          </div>
+        </>
+      )}
 
 
     </div>
