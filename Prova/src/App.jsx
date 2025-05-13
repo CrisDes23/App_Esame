@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <h1>Carica un'immagine</h1>
+      <h1>Outfitly</h1>
 
       <button className="custom-button" onClick={handleButtonClick}>
         <span role="img" aria-label="camera">📷</span> Seleziona immagine
@@ -48,6 +48,27 @@ function App() {
           />
         </div>
       )}
+
+      <h2>Su che parte del vestito ti serve un consiglio?</h2>
+
+      <div className='Scelta-Consiglio'>
+        
+        <button className='Busto'>
+          Busto
+        </button>
+
+        <button className='Gambe'>
+          Gambe
+        </button>
+
+        <button className='Scarpe'>
+          Scarpe
+        </button>
+      
+      </div>
+      
+
+
     </div>
   );
 }

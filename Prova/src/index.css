@@ -8,26 +8,46 @@ body {
   padding: 40px;
   background-color: #151515;
   font-family: Arial;
-  display: flex;               /* Abilita Flexbox */
-  flex-direction: column;      /* Imposta la disposizione in colonna */
-  justify-content: center;     /* Centra verticalmente */
-  align-items: center;         /* Centra orizzontalmente */
-  height: 100vh;               /* Usa tutta l'altezza della finestra */
-  text-align: center;          /* Allinea il testo al centro */
+  display: flex;               
+  flex-direction: column;      
+  justify-content: center;     
+  align-items: center;         
+  height: 100vh;               
+  text-align: center; 
+  position: relative;
+  overflow: hidden;         
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/Nebbia.jpg'); /* immagine di nebbia */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* regola la visibilità */
+  filter: blur(8px);
+  z-index: -1;
+  pointer-events: none; /* evita interferenze con i click */
+}
+
+
 h2{
-  color: #f3f3f3;
+  color: #48a7cc;
   text-align: center;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 35px;
+  font-family: "Eagle Lake", serif;
 }
 
 h1 {
   font-size: 48px;
   text-align: center;
   margin-bottom: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Sriracha", cursive;
   font-weight: bold;
   letter-spacing: 1px;
   background: linear-gradient(270deg, #ff4d4d, #4dff4d, #4d4dff, #ff4d4d);
@@ -35,6 +55,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 10s ease infinite;
+  margin-top: -150px;
 }
 
 /* Animazione del gradiente */
@@ -60,6 +81,7 @@ h1 {
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  font-family: "Eagle Lake", serif;
 }
 
 .custom-button:hover {
@@ -85,16 +107,100 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;  /* Ridotto ulteriormente la larghezza del contenitore */
-  height: 100px; /* Ridotto ulteriormente l'altezza del contenitore */
-  margin: 20px auto; /* Centra il contenitore orizzontalmente */
-  border: 1px solid #ccc; /* Aggiungi un bordo per vedere chiaramente il contenitore */
+  width: 100%;  
+  max-width: 500px;
+  height: auto; 
+  margin: 20px auto; 
+  border: 1px solid #ccc; 
 }
 
 /* Immagine */
 img {
-  width: 100%;         /* L'immagine occuperà tutta la larghezza del contenitore */
-  height: 100%;        /* L'immagine occuperà tutta l'altezza del contenitore */
-  object-fit: contain; /* Mantiene le proporzioni senza deformare l'immagine */
+  width: 100%; 
+  max-width: 100%;        
+  height: auto;    
+  max-height: 400px;    
+  object-fit: contain; 
   border-radius: 10px;
+  margin-top: 30px;
 }
+
+.Scelta-Consiglio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 50px;
+  
+}
+
+.Gambe{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0e19ac;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Eagle Lake", serif;
+}
+
+.Gambe:hover{
+  background-color: #117f86;
+  transform: translateX(-50%) translateY(-2px)
+}
+
+.Busto{
+  background-color: #0e19ac;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Eagle Lake", serif;
+}
+
+.Busto:hover{
+  background-color: #117f86;
+  transform: translateY(-2px);
+}
+
+.Scarpe{
+  background-color: #0e19ac;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Eagle Lake", serif;
+}
+
+.Scarpe:hover{
+  background-color: #117f86;
+  transform: translateY(-2px);
+}
+
