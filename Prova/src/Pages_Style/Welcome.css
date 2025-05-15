@@ -1,0 +1,47 @@
+.welcome{
+    font-family: Arial;
+    color: red;
+    margin-top: -150px;
+    padding: 50px;
+}
+
+.desc-App{
+    color: white;
+    padding: 50px;
+}
+
+.GoToSelect {
+  background-color: #0e19ac;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  font-family: "Eagle Lake", serif;
+}
+
+.GoToSelect:hover {
+  background-color: #117f86;
+  transform: translateY(-2px);
+}
+
+.GoToSelect:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.GoToSelect svg {
+  margin-right: 8px;
+}
+
+.GoToSelect:focus {
+  outline: none;
+}
