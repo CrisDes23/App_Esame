@@ -1,224 +1,87 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  padding: 40px;
-  background-color: #151515;
-  font-family: Arial;
-  display: flex;               
-  flex-direction: column;      
-  justify-content: center;     
-  align-items: center;         
-  min-height: 110vh;               
-  text-align: center; 
-  position: relative;
-  overflow: auto;         
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../assets/Nebbia.jpg'); /* immagine di nebbia */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; /* regola la visibilità */
-  filter: blur(8px);
-  z-index: -1;
-  pointer-events: none; /* evita interferenze con i click */
-}
-
-
-h2{
-  color: #48a7cc;
+.select-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fdfdfd, #f3f3f3);
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #222;
   text-align: center;
+  padding: 40px 20px;
+}
+
+.select-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
   margin-bottom: 30px;
-  font-size: 35px;
-  font-family: "Eagle Lake", serif;
 }
 
-.titolo-select {
-  font-size: 48px;
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: "Sriracha", cursive;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: linear-gradient(270deg, #ff4d4d, #4dff4d, #4d4dff, #ff4d4d);
-  background-size: 800% 800%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientShift 10s ease infinite;
-  margin-top: -150px;
-}
-
-/* Animazione del gradiente */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* src/index.css */
-.custom-button {
-  background-color: #0e19ac;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
+.upload-button {
+  background-color: #111;
+  color: #fff;
+  padding: 12px 24px;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  font-family: "Eagle Lake", serif;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
-.custom-button:hover {
-  background-color: #117f86;
-  transform: translateY(-2px);
+.upload-button:hover {
+  background-color: #444;
 }
 
-.custom-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.custom-button svg {
-  margin-right: 8px;
-}
-
-.custom-button:focus {
-  outline: none;
-}
-
-/* Centra il contenitore dell'immagine */
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;  
-  max-width: 500px;
-  height: auto; 
-  margin: 20px auto; 
-  border: 1px solid #ccc; 
-}
-
-/* Immagine */
-img {
-  width: 100%; 
-  max-width: 100%;        
-  height: auto;    
-  max-height: 400px;    
-  object-fit: contain; 
-  border-radius: 10px;
+.image-preview {
   margin-top: 30px;
 }
 
-.Scelta-Consiglio{
+.image-preview img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.advice-section {
+  margin-top: 40px;
+}
+
+.advice-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.options {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  position: relative;
-  margin-top: 50px;
-  
-}
-
-
-.Gambe{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #0e19ac;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  display: block;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Eagle Lake", serif;
+  flex-wrap: wrap;
 }
 
-.Gambe:hover{
-  background-color: #117f86;
-  transform: translateX(-50%) translateY(-2px)
-}
-
-.Busto{
-  background-color: #0e19ac;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
+.options button {
+  background-color: #333;
+  color: #fff;
   border: none;
-  border-radius: 50px;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
   cursor: pointer;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Eagle Lake", serif;
+  transition: background 0.3s;
 }
 
-.Busto:hover{
-  background-color: #117f86;
-  transform: translateY(-2px);
+.options button:hover {
+  background-color: #555;
 }
 
-.Scarpe{
-  background-color: #0e19ac;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Eagle Lake", serif;
-}
-
-.Scarpe:hover{
-  background-color: #117f86;
-  transform: translateY(-2px);
-}
-
-
-/* Animazione fade-in */
 .fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 3s forwards; /* Applica l'animazione di fade-in */
+  animation: fade 0.5s ease-in;
 }
 
-/* Keyframes per l'animazione fade-in */
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-

@@ -1,30 +1,25 @@
-import React from "react";
-import {useNavigate} from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Pages_Style/Welcome.css';
 
-export function Welcome(){
-    const navigate = useNavigate();
+export default function Welcome() {
+  const navigate = useNavigate();
 
-    const GoToSelect = () => {
-        navigate('/Select');
-    };
+  return (
+    <div className="welcome-page">
+      <h1 className="welcome-title">Benvenuto su Outfitly!</h1>
 
+      {/* 👉 Qui va la descrizione */}
+      <p className="welcome-description">
+        Benvenuto su <strong>Outfitly</strong>, il tuo assistente di stile intelligente.  
+        Carica una foto del tuo outfit e lascia che l'intelligenza artificiale ti suggerisca 
+        l'abbinamento perfetto per ogni occasione.  
+        Eleganza, semplicità e personalizzazione, tutto in un clic.
+      </p>
 
-
-
-
-
-    return(
-        <div>
-            <h1 className="welcome">Benevnuto su Outfitly</h1>
-            <p className="desc-App">Outfitly è un sito per ...</p>
-            <button className="GoToSelect" onClick={GoToSelect}>
-                Next Page
-            </button>
-        </div>
-    );
+      <button className="start-button" onClick={() => navigate('/select')}>
+        Scopri subito l'abbinamento che fa al caso tuo!
+      </button>
+    </div>
+  );
 }
-
-
-
-export default Welcome;

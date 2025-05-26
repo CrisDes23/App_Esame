@@ -1,46 +1,36 @@
-
 import React, { useRef, useState } from 'react';
 import '../Pages_Style/Select.css';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export function Select() {
-  
+export default function Select() {
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    
     fileInputRef.current.click();
   };
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // Aggiorna lo stato con l'immagine caricata
       setImage(URL.createObjectURL(file));
-      
-    }
-
-    const navigate = useNavigate();
-
-    const GoToResult = () => {
-        navigate('/Rsult');
-    }
-
-    const GoToWelcome = () => {
-        navigate('/Welcome');
     }
   };
 
-  return (
-    <div>
-      <h1 className='titolo-select'>Outfitly</h1>
+  const handleSelection = (part) => {
+    navigate('/result', { state: { part, image } });
+  };
 
-      <button className="custom-button" onClick={handleButtonClick}>
-        <span role="img" aria-label="camera">📷</span> Seleziona immagine
+  return (
+    <div className="select-page">
+      <h1 className="select-title">Outfitly</h1>
+      <p className="subtitle">Carica un'immagine e scegli su quale parte dell'outfit vuoi un consiglio</p>
+
+      <button className="upload-button" onClick={handleButtonClick}>
+        📷 Seleziona immagine
       </button>
 
-      {/* Input file nascosto */}
       <input
         type="file"
         accept="image/*"
@@ -49,41 +39,22 @@ export function Select() {
         onChange={handleFileChange}
       />
 
-      {/* Mostra l'immagine appena caricata */}
       {image && (
-        <div className="Image-container">
-          <img
-            src={image} // Usa l'URL dell'immagine
-            alt="Uploaded"
-          />
+        <div className="image-preview">
+          <img src={image} alt="Selezionata" />
         </div>
-
       )}
 
-      {image &&(
-        <>
-          <h2 className='fade-in'>Su che parte del vestito ti serve un consiglio?</h2>
-
-          <div className='Scelta-Consiglio'>
-        
-            <button className='Busto fade-in'>
-             Busto
-            </button>
-
-           <button className='Gambe fade-in'>
-             Gambe
-            </button>
-
-            <button className='Scarpe fade-in'>
-              Scarpe
-            </button>
+      {image && (
+        <div className="advice-section">
+          <h2 className="fade-in">Su quale parte vuoi un consiglio?</h2>
+          <div className="options">
+            <button onClick={() => handleSelection('Busto')}>Busto</button>
+            <button onClick={() => handleSelection('Gambe')}>Gambe</button>
+            <button onClick={() => handleSelection('Scarpe')}>Scarpe</button>
           </div>
-        </>
+        </div>
       )}
-
-
     </div>
   );
 }
-
-export default Select;
