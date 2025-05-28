@@ -9,7 +9,6 @@ export default function Welcome() {
     <div className="welcome-page">
       <h1 className="welcome-title">Benvenuto su Outfitly!</h1>
 
-      {/* 👉 Qui va la descrizione */}
       <p className="welcome-description">
         Benvenuto su <strong>Outfitly</strong>, il tuo assistente di stile intelligente.  
         Carica una foto del tuo outfit e lascia che l'intelligenza artificiale ti suggerisca 
