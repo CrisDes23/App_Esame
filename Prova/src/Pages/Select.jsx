@@ -14,7 +14,11 @@ export default function Select() {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setImage(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result); // salva data:image/... base64
+      };
+      reader.readAsDataURL(file);
     }
   };
 
