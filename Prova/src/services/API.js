@@ -34,7 +34,6 @@ async function generate(tipo, immagineBase64, mimeType) {
       },
     },
   };
-
   const model = 'gemini-2.5-flash-preview-05-20'; // Modello Gemini utilizzato
   const prompts = {
     'Busto': 'Sei un stylist professionista, dammi 5 consigli per l\'abito superiore (magliette, camicie, giacche, pullover) in base all\'immagine che ti ho inviato. Per ogni consiglio fornisci il nome dell\'abito, una descrizione dettagliata e la motivazione della scelta.',
