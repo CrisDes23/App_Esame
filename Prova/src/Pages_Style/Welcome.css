@@ -1,6 +1,6 @@
 .welcome-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #ffffff, #f3f3f3);
+  background-color: #ebdde5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,15 +23,18 @@
   max-width: 600px;
   color: #444;
   line-height: 1.6;
-  background: #fafafa;
+  background: #ffffff;
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 0 100px rgba(255, 255, 255, 1),     
+    0 0 60px rgba(255, 255, 255, 0.8),    
+    0 5px 20px rgba(0, 0, 0, 0.05);       
   margin-bottom: 30px;
 }
 
 .start-button {
-  background-color: #111;
+  background-color:	#C08081;
   color: white;
   padding: 12px 28px;
   border: none;
@@ -39,8 +42,11 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
 }
 
 .start-button:hover {
   background-color: #444;
+  
 }

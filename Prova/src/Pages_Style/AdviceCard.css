@@ -1,32 +1,45 @@
-/* Pages_Style/AdviceCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&family=Lato:wght@400&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ebdde5;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.aguafina-script-regular {
+  font-family: "Aguafina Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .advice-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #C08081 0%, #C08081 100%);
   border-radius: 20px;
   padding: 25px;
   margin: 15px 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 10px 30px rgba(192, 128, 129, 0.4);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   color: white;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .advice-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.07) 100%);
   border-radius: 20px;
   pointer-events: none;
+  z-index: 0;
 }
 
-.advice-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
 
 .card-header {
   display: flex;
@@ -34,33 +47,39 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-number {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
   margin-right: 15px;
   backdrop-filter: blur(10px);
+  color: #FFF8F8;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-title {
   margin: 0;
   font-size: 22px;
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: #FFF8F8;
 }
 
 .card-content {
   position: relative;
   z-index: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-section {
@@ -75,38 +94,60 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section-text {
   font-size: 15px;
   line-height: 1.6;
   margin: 0;
-  color: rgba(255, 255, 255, 0.95);
-  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.15);
   padding: 15px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-footer {
   margin-top: 20px;
   position: relative;
   z-index: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .style-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
+  color: #FFF8F8;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* welcome-description luminoso */
+.welcome-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #333;
+  line-height: 1.6;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px rgba(255, 255, 255, 1),
+    0 0 60px rgba(255, 255, 255, 0.8),
+    0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Responsive design */
@@ -115,19 +156,74 @@
     padding: 20px;
     margin: 10px 0;
   }
-  
+
   .card-title {
     font-size: 20px;
   }
-  
+
   .card-number {
     width: 35px;
     height: 35px;
     font-size: 16px;
   }
-  
+
   .section-text {
     font-size: 14px;
     padding: 12px;
   }
+}
+.parent-container {
+  position: relative;
+  width: 600px; /* o 100% se vuoi responsive */
+  height: 600px; /* regola in base alle dimensioni desiderate */
+  margin: auto;
+}
+
+.advice-card {
+  position: absolute;
+  width: 400px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(192, 128, 129, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #C08081 0%, #C08081 100%);
+}
+
+
+/* posizione a pentagono con vertice in alto (senso orario) */
+.position-1 {
+  top: 101%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.position-2 {
+  top: 125%;
+  right: 2%;
+  transform: translate(0, 0);
+}
+
+.position-3 {
+  top: 208%;
+  right: 18%;
+  transform: translate(0, 0);
+}
+
+.position-4 {
+  top: 208%;
+  left: 18%;
+  transform: translate(0, 0);
+}
+
+.position-5 {
+  top: 125%;
+  left: 2%;
+  transform: translate(0, 0);
+}
+
+/* Hover effetto luce */
+.advice-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.9);
 }
