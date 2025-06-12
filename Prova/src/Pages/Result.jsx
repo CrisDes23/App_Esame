@@ -53,7 +53,7 @@ export default function Result() {
       </div>
 
       <button className="back-button" onClick={() => navigate('/select')}>
-        🔙 Torna alla selezione
+        ⭠ Torna alla selezione
       </button>
     </div>
   );

@@ -193,6 +193,11 @@ body {
 
 
 /* posizione a pentagono con vertice in alto (senso orario) */
+.container {
+  position: relative;
+  padding-bottom: 300px; /* riserva spazio per i blocchi fuori flusso */
+}
+
 .position-1 {
   top: 101%;
   left: 50%;
@@ -206,13 +211,13 @@ body {
 }
 
 .position-3 {
-  top: 208%;
+  top: 220%;
   right: 18%;
   transform: translate(0, 0);
 }
 
 .position-4 {
-  top: 208%;
+  top: 220%;
   left: 18%;
   transform: translate(0, 0);
 }
