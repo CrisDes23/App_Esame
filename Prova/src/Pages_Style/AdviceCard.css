@@ -180,8 +180,7 @@ body {
 }
 
 .advice-card {
-  position: absolute;
-  width: 400px;
+  width: 350px;
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(192, 128, 129, 0.4);
@@ -191,43 +190,35 @@ body {
   background: linear-gradient(135deg, #C08081 0%, #C08081 100%);
 }
 
-
-/* posizione a pentagono con vertice in alto (senso orario) */
-.container {
-  position: relative;
-  padding-bottom: 300px; /* riserva spazio per i blocchi fuori flusso */
-}
-
 .position-1 {
-  top: 101%;
-  left: 50%;
+  top: 130%;
+  left: 2%;
   transform: translateX(-50%);
 }
 
-.position-2 {
-  top: 125%;
-  right: 2%;
+.position-3 {
+  top: 130%;
+  right:0%;
   transform: translate(0, 0);
 }
 
-.position-3 {
-  top: 220%;
-  right: 18%;
+.position-2 {
+  top: 130%;
+  right: 40%;
   transform: translate(0, 0);
 }
 
 .position-4 {
-  top: 220%;
-  left: 18%;
+  top: 260%;
+  left: 60%;
   transform: translate(0, 0);
 }
 
 .position-5 {
-  top: 125%;
+  top: 260%;
   left: 2%;
   transform: translate(0, 0);
 }
-
 /* Hover effetto luce */
 .advice-card:hover {
   box-shadow: 0 15px 40px rgba(255, 255, 255, 0.9);
